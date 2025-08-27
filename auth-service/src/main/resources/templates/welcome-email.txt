@@ -1,0 +1,11 @@
+Hi {USERNAME},<br/>
+<br/>
+Welcome to our platform! Your registration was successful.<br/>
+<br/>
+Your temporary password is: <b>{PASSWORD}</b><br/>
+Please use this password to log in and reset it to your own as soon as possible.<br/>
+<br/>
+If you have any questions, feel free to contact our support team.<br/>
+<br/>
+Best regards,<br/>
+The Team

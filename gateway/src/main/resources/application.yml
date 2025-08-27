@@ -1,0 +1,20 @@
+spring:
+  cloud:
+    gateway:
+      server:
+        webflux:
+          routes:
+            - id: user-service
+              predicates:
+                - Path=/user/**
+              uri: http://localhost:8087
+              filters:
+                - StripPrefix=1
+
+
+
+server:
+  port: 9090
+jwt:
+  app:
+    jwt-secret: 2b9f6d7a1d5c0a99c7d8e22b3f441acfe7b1aa6d02b57d6c9c89af12d8bb23f1

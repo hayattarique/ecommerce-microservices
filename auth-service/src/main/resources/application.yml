@@ -1,0 +1,32 @@
+spring:
+  application:
+    name: auth-service
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/auth-service
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${abc@gmail.com:EMAIL}
+    password: whdk guzh wvkv alwi
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+            required: true
+server:
+  port: 8087
+
+
+jwt:
+  app:
+    jwt-secret: 2b9f6d7a1d5c0a99c7d8e22b3f441acfe7b1aa6d02b57d6c9c89af12d8bb23f1
+    expiration: 86400000 # 24 hours in milliseconds
