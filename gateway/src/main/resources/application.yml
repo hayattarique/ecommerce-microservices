@@ -10,6 +10,12 @@ spring:
               uri: http://localhost:8087
               filters:
                 - StripPrefix=1
+            - id: product-service
+              predicates:
+                - Path=/product/**
+              uri: http://localhost:8080
+              filters:
+                - StripPrefix=1
 
 
 
