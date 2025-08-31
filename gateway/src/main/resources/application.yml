@@ -6,16 +6,16 @@ spring:
       server:
         webflux:
           routes:
-            - id: user-service
+            - id: auth-service
               predicates:
                 - Path=/user/**
-              uri: http://localhost:8087
+              uri: lb://AUTH-SERVICE
               filters:
                 - StripPrefix=1
             - id: product-service
               predicates:
                 - Path=/product/**
-              uri: http://localhost:8080
+              uri: lb://PRODUCT-SERVICE
               filters:
                 - StripPrefix=1
 server:
@@ -25,7 +25,5 @@ jwt:
     jwt-secret: 2b9f6d7a1d5c0a99c7d8e22b3f441acfe7b1aa6d02b57d6c9c89af12d8bb23f1
 eureka:
   client:
-    fetch-registry: false
-    register-with-eureka: true
     service-url:
       defaultZone: http://localhost:8761/eureka/
